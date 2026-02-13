@@ -150,3 +150,89 @@ Se pueden importar y exportar funciones y constantes.
 ## Refactorizar
 
 Consiste en mejorar el código que uno ha escrito y que le funciona para obtener mejores prácticas y un código más limpio.
+
+## Manejo de los Objetos
+
+Recuerda que los objetos son un dato que cuenta con propiedades y estas propiedades pueden ser objetos, por ello, son cruciales a la hora de crear proyectos y por ende debemos de saber como usarlos.
+
+Una práctica cuestionable es añadir propiedades de manera externa, al estar VSCode escrito usando los tipos de TS, por ende no reconocerá las propiedades externas que le quieras añadir al objeto.
+
+Una mala práctica es eliminar propiedades del objeto, mediante la palabra reservada _delete_, ya que puede comprometer la estructura del proyecto.
+
+Para poder referenciar las propiedades de un objeto es necesario usar el operador **.**:
+
+`user.age // Quiero acceder a la propiedad age del objeto user`
+
+Contamos con la estructura **For In** para poder recorrer los objetos y así obtener la información de las propiedades que tienen.
+
+```js
+for (const key in user) {
+  const value = user[key];
+  console.log(`Clave ${key} el valor es ${value}`);
+
+  // Clave name el valor es Pepe
+  // Clave age el valor es 22
+  // Clave job el valor es Developer
+}
+```
+
+También contamos con la clase **Object** que cuenta con distintos métodos que también nos pueden ayudar a la hora de recopilar la información de los valores y de las claves. La información nos aparece como un array de arrays.
+
+```js
+Object.keys(user); // Claves o propiedades
+Object.values(user); // Información de las propiedades
+Object.entries(user); // Toda la información
+```
+
+## Manejo de Arrays
+
+Los arrays tienen la siguiente forma y se realizan mediante corchetes: `const user = ['Pablo', 24, 'UI /UX Designer'];`
+
+Al ser objetos, se le pueden añadir propiedades desde fuera, a esto se le conoce como **excentricidad**
+
+Es importante saber que los arrays se pueden **iterar** para poder obtener sus datos según la posición que queramos referenciar: `console.log(user[0]);`
+
+### Estructuras de Control
+
+- Bucle For
+- Bucle For In
+- Bucle For Off
+
+### Propiedades de Arrays
+
+Existen las propiedades mutables, las inmutables y las HOF
+
+#### Mutables
+
+Se le llaman así ya que **modifican** el array original.
+
+```js
+userContacts.push('Ernestina');
+userContacts.pop();
+userContacts.unshift('Micaela');
+userContacts.shift();
+userContacts.sort();
+userContacts.reverse();
+```
+
+#### Inmutables
+
+Se le llaman así ya que no modifican el array original, por ende se tiene que guardar en otra variable.
+
+```js
+const newArray = userContacts.concat(['Raul', 'Fernando']);
+```
+
+#### HOF
+
+Se implementaron en el ECMA Script 1.5 y son la manera más actual de como tratar arrays de forma **sincrona**. Suelen usar callbacks que reciben como parámetros el item o el array.
+
+```js
+userContacts.forEach((item) => console.log(item)); // No crea un nuevo array o modifica el existente, solo itera.
+user.map((item) => console.log(`Hola ${item}`)); // Itera también el array
+numbers.filter((item) => item > 10); // Devuelve un array con los datos que cumplan con la condición del callback
+numbers.find((item) => item > 10); // Devuelve el primer valor que cumpla con la condición
+user.findIndex((item) => item === 'Ernesto'); // Devuelve el índice donde se encuentra el item a ubicar, devuelve un '-1' si es que no existe el valor en ese array
+numbers.reduce((prev, current) => prev + current); // Sirve para reducir el array en un único elemento. Sirve para acumular números o para convertir un array en una cadena
+arrayOfArrays.flat(); // Sirve para aplanar muchos arrays en uno solo.
+```
