@@ -236,3 +236,36 @@ user.findIndex((item) => item === 'Ernesto'); // Devuelve el índice donde se en
 numbers.reduce((prev, current) => prev + current); // Sirve para reducir el array en un único elemento. Sirve para acumular números o para convertir un array en una cadena
 arrayOfArrays.flat(); // Sirve para aplanar muchos arrays en uno solo.
 ```
+
+## Variables y objetos
+
+Un objeto puede ser referenciado por 2 o más variables
+
+Una referencia nos permite guardar la información de un objeto en otras zonas de la memoria, y la variable estará en una parte más "cara", así se organiza mejor la información y el objeto puede mutar las veces que sea necesario.
+
+Para evitar la mutación, debemos de crear un objeto nuevo desestructurando el antiguo: `objeto.propiedad = {...objeto.propiedad,propiedad: nuevo_valor}`
+
+## Enrutamiento
+
+Existe las referencias absolutas y referenciadas a la raíz. Las absolutas se usan para abrir enlaces externos y las referenciales a páginas internas del proyecto y/o documento.
+
+Con esta lógica podremos construir una MultiPage (MP)
+
+### Single-Page Application
+
+Tenemos un ejemplo en la carpeta [SPA-Web](/SPA_Web/index.html). Acá estamos revisando la lógica de los eventos
+
+_Event_ tiene 2 métodos que son **currentTarget** y **Target**. El target es el _emisor del evento_ y el current es el _listener del evento_.
+
+Los elementos hijos suelen delegar los eventos a sus elementos padres.
+
+### Location
+
+Este objeto nos ayuda a la hora de realizar una navegación útil en una SPA, usando el método **pathname** que tiene.
+
+### Errores de path
+
+Con este sistema, existen problemas a la hora de compartir la URL, ya que se suele quedar pillado en el index, para ello inicializamos la navegación primero en nuestro main.
+
+## Manejo de Formularios
+

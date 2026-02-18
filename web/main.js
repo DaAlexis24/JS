@@ -6,7 +6,7 @@ function handleChange() {
     }
 }
 
-// Abrir menu movil
+// Abrir menu móvil
 const handleMenu = (event) => {
     event.preventDefault();
     console.log('Click', event.target.localName);
