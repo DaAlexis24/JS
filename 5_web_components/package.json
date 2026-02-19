@@ -1,0 +1,13 @@
+{
+    "name": "5_web_components",
+    "version": "1.0.0",
+    "description": "- selector\r - template\r - renderización: template -> selector",
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "server:spa": "live-server --entry-file=index.html --port=9999",
+        "server:mpa": "live-server --port=5555"
+    }
+}
