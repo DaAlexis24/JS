@@ -1,5 +1,5 @@
 export const homePage = () => {
-    console.log('Loaded Home');
+    console.log('Loaded Home')
     const setTemplate = () => `
      <section class="home" id="home" aria-label="Home">
       <hgroup>

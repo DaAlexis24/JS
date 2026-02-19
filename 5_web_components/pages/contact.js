@@ -1,38 +1,66 @@
-export const contactPage = () => {
-    console.log('Loaded Contact');
+const handleContact = (event) => {
+    event.preventDefault();
+    const { target } = event;
+    const { elements } = target;
+    console.log("Target");
+    console.dir(elements);
 
-    const handleContact = (event) => {
-        event.preventDefault();
-        console.log(event);
+    console.log("Enviando...");
+    // let userName = elements[0].value
+    // console.log(userName)
+    // userName = elements['user-name'].value
+    // console.log(userName)
+    // userName = elements.namedItem('user-name').value
+    // console.log(userName)
+    // userName = elements.item(0).value
+    // console.log(userName)
 
-        const { target } = event;
-        const { elements } = target;
-        console.log('Target');
-        console.dir(elements);
-
-        console.log('Enviando...');
-        // let userName = elements[0].value;
-        // console.log(userName);
-        // userName = elements['userName'].value;
-        // console.log(userName);
-        // userName = elements.namedItem('userName').value;
-        // console.log(userName);
-        // userName = elements.item(0).value;
-        // console.log(userName);
-
-        const contact = {
-            userName: '',
-            phone: '',
-            age: 0,
-            password: '',
-        };
-
-        for (const key in contact) {
-            contact[key] = elements[key].value;
-        }
-
-        console.log(contact);
+    const contactData = {
+        userName: "",
+        phone: "",
+        age: 0,
+        password: "",
+        dob: "",
+        contactTime: "",
+        file: "",
+        email: "",
+        message: "",
+        country: "",
+        subscribeNewsletter: false,
+        subscribeUpdates: false,
+        contactMethod: "",
     };
+
+    for (const key in contactData) {
+        contactData[key] =
+            elements.namedItem(key).type !== "checkbox"
+                ? elements.namedItem(key).value
+                : elements.namedItem(key).checked;
+
+        if (elements.namedItem(key).type === "date") {
+            contactData[key] = new Date(contactData[key]);
+        }
+        if (elements.namedItem(key).type === "file") {
+            contactData[key] = contactData[key].split("\\").pop();
+        }
+    }
+
+    console.log(contactData);
+
+    const formData = new FormData(target);
+    console.log(formData);
+
+    console.log("Enviando...");
+
+    //  fetch('url', {
+    //     method: POST,
+    //     body: formData
+
+    //  })
+};
+
+export const contactPage = () => {
+    console.log("Loaded Contacts");
 
     const setTemplate = () => `  
         <section id="contact" aria-label="Contacto">
@@ -115,9 +143,8 @@ export const contactPage = () => {
 
     </section>`;
 
-    document.querySelector('main').innerHTML = setTemplate();
-
+    document.querySelector("main").innerHTML = setTemplate();
     document
-        .querySelector('#contact form')
-        .addEventListener('submit', handleContact);
+        .querySelector("#contact form")
+        .addEventListener("submit", handleContact);
 };

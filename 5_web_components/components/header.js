@@ -1,7 +1,7 @@
-import { theme } from './theme.js';
+import { theme } from "./theme.js";
 
 export const header = () => {
-    const selector = 'app-header';
+    const selector = "app-header";
 
     const setTemplate = () => `
     <header class="header">

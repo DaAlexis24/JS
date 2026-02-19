@@ -2,6 +2,8 @@
 
 ## Componente
 
+Una función
+
 - selector
 - template
 - renderización: template -> selector
@@ -18,9 +20,11 @@ export const component = () => {
 
 ## Uso de un componente
 
-- añado el selector
-- ejecutar ('registrar') el componente
-  - opcionalmente pasamos valores a la instancia
+- Fichero HTML / o template
+  - añado el selector
+- Fichero JS
+  - ejecutar ('registrar') el componente
+    - opcionalmente pasamos valores a la instancia
 
 ## Uso de props en los componente
 

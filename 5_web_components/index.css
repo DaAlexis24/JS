@@ -45,7 +45,7 @@ menu.mobile-menu {
     width: 2.5rem;
 }
 
-menu {
+.menu {
     color: var(--color-primary);
     list-style: none;
     a {
@@ -165,6 +165,20 @@ fieldset {
     button {
         padding: 0.2rem 0.4rem;
     }}
+
+.todo {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none;   
+        gap: 1rem; 
+    }
+    li {
+        padding: 1rem;
+        border: 1px solid;
+        border-radius: 10px;
+    }
+}
 
 @media (width > 500px) {
     menu.full-menu {
