@@ -266,3 +266,11 @@ Este objeto nos ayuda a la hora de realizar una navegación útil en una SPA, us
 ### Errores de path
 
 Con este sistema, existen problemas a la hora de compartir la URL, ya que se suele quedar pillado en el index, para ello inicializamos la navegación primero en nuestro main.
+
+## Emisión de eventos
+
+Sirve cuando un elemento hijo le envía un evento **propio** a su elemento padre. A esto se le puede entender como **lógica de negocio**, según lo que se requiera.
+
+### Persistencia
+
+Normalmente se usa en el localStorage, para que los datos que modifiquemos se queden guardados sin afectar al backend.
