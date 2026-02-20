@@ -6,11 +6,12 @@
     --soft-fawn: #d7be82ff;
     --saddle-brown: #7a4419ff;
     --olive-bark: #755c1bff;
+    --pigment-blue: #28418d;
 
     --black: rgb(30, 30, 30);
-    --light-gray: rgb(60, 60, 60);
+    --dark-gray: rgb(60, 60, 60);
     --gray: rgb(100, 100, 100);
-    --dark-gray: rgb(180, 180, 180);
+    --light-gray: rgb(180, 180, 180);
     --white: rgb(230, 230, 230);
 
     /* Paleta de colores */
@@ -20,11 +21,14 @@
     --back-color-primary: var(--color-secondary);
     --back-color-secondary: brown;
     --back-color-accent: rgb(86, 45, 45);
+    --back-dark-color: var(--pigment-blue);
+    --color-dark-primary: var(--light-gray);
+    --color-dark-secondary: var(--dark-gray);
 
     /* Fuentes*/
     --font-primary:
-        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    --font-title: "Arial Black", "Arial Bold", Gadget, sans-serif;
+        'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-title: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
 
     /* Escala*/
     --scala: 1.2;

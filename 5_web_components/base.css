@@ -74,3 +74,14 @@ h6,
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
+
+.dark {
+    background-color: var(--back-dark-color);
+    color: var(--color-dark-primary);
+}
+
+.dark h1,
+h2,
+h3 {
+    color: var(--color-dark-secondary);
+}
