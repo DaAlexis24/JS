@@ -81,7 +81,7 @@ h6,
 }
 
 .dark h1,
-h2,
-h3 {
+.dark h2,
+.dark h3 {
     color: var(--color-dark-secondary);
 }
