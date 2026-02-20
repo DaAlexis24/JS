@@ -1,7 +1,7 @@
 export const socials = [
     {
-        name: "Github",
-        url: "https://github.com/pepeperz",
+        name: 'Github',
+        url: 'https://github.com/pepeperz',
         icon: `
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <title>Github</title>
@@ -10,8 +10,8 @@ export const socials = [
             </svg>`,
     },
     {
-        name: "X (Twitter)",
-        url: "https://twitter.com/pepeperez",
+        name: 'X (Twitter)',
+        url: 'https://twitter.com/pepeperez',
         icon: `
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <title>X (Twitter)</title>
@@ -20,8 +20,8 @@ export const socials = [
             </svg>`,
     },
     {
-        name: "LinkedIn",
-        url: "https://linkedin.com/in/pepeperez",
+        name: 'LinkedIn',
+        url: 'https://linkedin.com/in/pepeperez',
         icon: `
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <title>LinkedIn</title>
@@ -30,8 +30,8 @@ export const socials = [
             </svg>`,
     },
     {
-        name: "email",
-        url: "mailto:pepe.perez@example.com",
+        name: 'email',
+        url: 'mailto:pepe.perez@example.com',
         icon: `
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <title>email</title>
@@ -42,14 +42,16 @@ export const socials = [
 ];
 
 export const footer = () => {
-    const selector = "app-footer";
-    let address = "&copy; 2026 CFD Alcobendas - Curso IF2001";
+    const selector = 'app-footer';
+    let address = '&copy; 2026 CFD Alcobendas - Curso IF2001';
 
-    const list = socials.map(
-        (item) => `
+    const list = socials
+        .map(
+            (item) => `
         <li><a href="${item.url}" target="_blank">
          ${item.icon}</a></li>`,
-    ).join();
+        )
+        .join(' ');
 
     const setTemplate = () => `
         <footer class="footer">
