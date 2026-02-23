@@ -1,0 +1,92 @@
+{
+  "users": [
+    {
+      "id": "1aa1",
+      "name": "Pepe",
+      "email": "pepe@sample.com"
+    },
+    {
+      "id": "2bb2",
+      "name": "Luisa",
+      "email": "luisa@sample.com"
+    },
+    {
+      "id": "f1e0",
+      "name": "Ricardo",
+      "email": "ricardo@sample.com",
+      "age": 22
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1a2b",
+      "title": "Diseñar wireframes",
+      "owner": "María Gómez",
+      "isCompleted": true,
+      "description": "Crear wireframes para la web principal."
+    },
+    {
+      "id": "1a2c",
+      "title": "Configurar repositorio",
+      "owner": "Carlos Ruiz",
+      "isCompleted": true,
+      "description": "Inicializar proyecto y subirlo a GitHub."
+    },
+    {
+      "id": "1a2d",
+      "title": "Maquetar landing",
+      "owner": "Laura Fernández",
+      "isCompleted": false,
+      "description": "HTML y CSS para la página de inicio."
+    },
+    {
+      "id": "1a2e",
+      "title": "Implementar login",
+      "owner": "David López",
+      "isCompleted": false,
+      "description": "Crear formulario y lógica de autenticación."
+    },
+    {
+      "id": "1a2f",
+      "title": "Crear API REST",
+      "owner": "Equipo B",
+      "isCompleted": false,
+      "description": "Backend para gestión de usuarios y tareas."
+    },
+    {
+      "id": "1a2g",
+      "title": "Añadir tests unitarios",
+      "owner": "Ángel Rivera",
+      "isCompleted": false,
+      "description": "Pruebas para funciones principales."
+    },
+    {
+      "id": "1a2h",
+      "title": "Optimizar imágenes",
+      "owner": "Irene Martín",
+      "isCompleted": true,
+      "description": "Reducir peso y mejorar carga de recursos."
+    },
+    {
+      "id": "1a2i",
+      "title": "Configurar hosting",
+      "owner": "Pedro Sáez",
+      "isCompleted": false,
+      "description": "Subir la web a un servicio de hosting."
+    },
+    {
+      "id": "1a2j",
+      "title": "Revisar accesibilidad",
+      "owner": "Natalia Peña",
+      "isCompleted": true,
+      "description": "Comprobar contraste, navegación y etiquetas."
+    },
+    {
+      "id": "1a2k",
+      "title": "Documentar proyecto",
+      "owner": "Equipo A",
+      "isCompleted": false,
+      "description": "Crear README y documentación técnica."
+    }
+  ]
+}

@@ -274,3 +274,9 @@ Sirve cuando un elemento hijo le envía un evento **propio** a su elemento padre
 ### Persistencia
 
 Normalmente se usa en el localStorage, para que los datos que modifiquemos se queden guardados sin afectar al backend.
+
+## API REST
+
+Las API REST nos sirve a la hora de realizar peticiones (request) a un proveedor de datos y este nos devolverá una respuesta.
+
+Los headers más comunes son los de **method** y **status code**
